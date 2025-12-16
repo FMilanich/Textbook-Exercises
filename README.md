@@ -1,2 +1,2 @@
-# Textbook-Exercises
-Soluciones a ejercicios de libros de texto
+# Textbook Exercises
+Soluciones a ejercicios de libros de texto.
