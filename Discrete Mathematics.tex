@@ -233,4 +233,70 @@ the following numbers can we get as the cardinality of the union: 4, 6, 9, 10, 1
 
 We can get a set with cardinality 9, 10 or 14. The number depend on the number of duplicate elements in both sets.
 
+\subsection{Exercise}
+
+We form the union of two sets. We know that one of them has $n$ elements and
+the other has $m$ elements. What can we infer for the cardinality of the union?
+
+\hrulefill\vspace{2mm}
+
+We can infer that the cardinality of the union has to be greater than $n$ and $m$,
+and that it can be no greater than $n+m$.
+
+\subsection{Exercise}
+
+What is the intersection of
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item The sets $\{0, 1, 3\}$ and $\{1, 2, 3\}$;
+    \item the set of girls in this class and the set of boys in this class;
+    \item the set of prime numbers and the set of even numbers?
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item $\{0, 1, 3\} \cap \{1, 2, 3\} = \{1, 3\}$
+    \item $\{\text{Reimu}, \text{Marisa}\} \cap \emptyset = \emptyset$
+    \item $\{\text{Prime numbers}\} \cap \{\text{Even numbers}\} = \{2\}$
+\end{enumerate}
+
+\subsection{Exercise}
+
+We form the intersection of two sets. We know that one of them has $n$ elements
+and the other has $m$ elements. What can we infer for the cardinality of the intersection?
+
+\hrulefill\vspace{2mm}
+
+We can infer that the cardinality of the intersection can be even $\emptyset$,
+and that it can be no greater than the smallest number between $n$ and $m$.
+
+\subsection{Exercise}
+
+Prove that $|A \cup B| + |A \cap B| = |A| + |B|$.
+
+\hrulefill\vspace{2mm}
+
+\begin{align*}
+    |A| &= |{\text{Elements only in }A}| + |A \cap B| \\
+    |B| &= |{\text{Elements only in }B}| + |A \cap B| \\
+    |A| + |B| &= |{\text{Elements only in }A}| + |{\text{Elements only in }B}| + 2|A \cap B| \\
+    |A| + |B| &= |A \cup B| + |A \cap B|
+\end{align*}
+
+\subsection{Exercise}
+
+The \textit{symmetric difference} of two sets $A$ and $B$ is the set of elements that belong
+to exectly one of $A$ and $B$.
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item What is the symmetric difference of the set $\mathbb{Z_+}$ of non-negative integers and the set $E$ of even integers ($E = \{...-4, -2, 0, 2, 4,...$ contains both negative and positive even integers$\}$).
+    \item Form the symmetric difference of $A$ ad $B$, to get the set $C$. Form the symmetric difference of $A$ and $C$. What did you get? Give a proof of the answer.
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item The simmetric difference in that case would be the set of negative even numbers including 0 ($E^0_-$)
+    \item From the symmetric difference of $A$ and $C$ I get the set $B$. That's because $C$ is the symmetric difference between $A$ and $B$, and because of that every element of $A$ appears twice in the successive symmetric differences and is therefore canceled out, while exactly the elements of $B$ remain.
+\end{enumerate}
+
 \end{document}
