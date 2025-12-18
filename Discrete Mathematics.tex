@@ -4,6 +4,9 @@
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{enumitem}
 
+% Esto es para centrar cosas entre dos ecuaciones, muy útil
+\newcommand*\centermathcell[1]{\omit\hfil$\displaystyle#1$\hfil\ignorespaces}
+
 
 \title{
     Discrete Mathematics \\
@@ -298,5 +301,82 @@ to exectly one of $A$ and $B$.
     \item The simmetric difference in that case would be the set of negative even numbers including 0 ($E^0_-$)
     \item From the symmetric difference of $A$ and $C$ I get the set $B$. That's because $C$ is the symmetric difference between $A$ and $B$, and because of that every element of $A$ appears twice in the successive symmetric differences and is therefore canceled out, while exactly the elements of $B$ remain.
 \end{enumerate}
+
+\subsection{Exercise}
+
+Under the correspondence between numbers and subsets described above, which
+number correspond to subsets with 1 element?
+
+\hrulefill\vspace{2mm}
+
+The number who corresponds to subsets with 1 element is $2^1$ (or 2), because
+every set with 1 element has two subsets: $\emptyset$ and itself.
+
+\subsection{Exercise}
+
+What is the number of subsets of a set with $n$ elements, containing a given element?
+
+\hrulefill\vspace{2mm}
+
+The number of subsets containg a specific element of a set is just the number of
+combinations of all the other elements. The number of subsets is the same because they are
+almost identical, just adding that element. So that number should be $2^{n-1}$.
+
+\subsection{Exercise}
+
+What is the number of integers with
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item at most $n$ (decimal) digits;
+    \item exactly $n$ digits?
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item Because we are at base 10, the number is $10^n$. If we are counting negative numbers, the it would be $2 \cdot 10^n - 1$.
+    \item Well, if we're counting $n=1$ as the numbers between 0 and 9, then it would be 10. But, since leading zeroes are not usually what we're looking for, there would be 9 options for every leading number and 10 for the rest
+    \[
+    \begin{cases}
+        10 & n = 1 \\
+        9 \cdot 10^{n-1} & n \geq 2
+    \end{cases}
+    \]
+    And, if we count negative numbers it would be $2 \cdot 10 - 1 = 19$ for the numbers from -9 to 9, and $2 \cdot 9 \cdot 10^{n-1} = 18 \cdot 10^{n-1}$ for the rest
+    \[
+    \begin{cases}
+        19 & n = 1 \\
+        18 \cdot 10^{n-1} & n \geq 2
+    \end{cases}
+    \]
+\end{enumerate}
+
+\subsection{Exercise}
+
+How many bits (binary digits) does $2^{100}$ have if written in base 2?
+
+\hrulefill\vspace{2mm}
+
+It'd have a 1 and 100 trailing zeroes. Thus, $2^{100}$ has $101$ bits.
+
+\subsection{Exercise}
+
+Find a formula for the number of digits of $2^n$.
+
+\hrulefill\vspace{2mm}
+
+Given a specific exponent of 2, if it has $k$ digits then it means that it's between $10^{k-1}$ and $10^k$ such that
+
+\begin{align*}
+    10^{k-1} \leqslant  2^n < 10^k
+\end{align*}
+
+Now if we rewrite $2^n$ as $10^x$, then $x = \log2^n = n\log2$ and follows that
+
+\begin{alignat*}{4}
+    \centermathcell{10^{k-1}} &\leqslant& \centermathcell{10^{n\log2}} &<& \centermathcell{10^k} \\
+    \centermathcell{k-1} &\leqslant& \centermathcell{n\log2} &<& \centermathcell{k}
+\end{alignat*}
+
+And thus, knowing that $k - 1$ is an integer and $n\log2$ isn't, we get that $\lfloor n\log2 \rfloor + 1$ is the number of digits of $2^n$. Also, because $n\log2$ would never be an integer and $2^n \neq 10^k$, it's also true that the number of digits of $2^n$ is $\lceil n\log2 \rceil$.
 
 \end{document}
