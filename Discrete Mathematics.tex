@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{inputenc}
-\usepackage{graphicx, float}
+\usepackage{graphicx, float, forest}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{enumitem}
 
@@ -378,5 +378,34 @@ Now if we rewrite $2^n$ as $10^x$, then $x = \log2^n = n\log2$ and follows that
 \end{alignat*}
 
 And thus, knowing that $k - 1$ is an integer and $n\log2$ isn't, we get that $\lfloor n\log2 \rfloor + 1$ is the number of digits of $2^n$. Also, because $n\log2$ would never be an integer and $2^n \neq 10^k$, it's also true that the number of digits of $2^n$ is $\lceil n\log2 \rceil$.
+
+\subsection{Exercise}
+
+Draw a tree illustrating the way we counted the number of strings of length 2
+formed from the characters $a$, $b$ and $c$, and explain how it gives the answer. Do the
+same for the more general problem when $n=3$, $k_1=2$, $k_2=3$, $k_3=2$.
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item  
+        \begin{forest}
+            [$a$ [$a$ [$aa$]] [$b$ [$ab$]] [$c$ [$ac$]]]
+        \end{forest}
+        \begin{forest}
+            [$b$ [$a$ [$ba$]] [$b$ [$bb$]] [$c$ [$bc$]]]        
+        \end{forest}
+        \begin{forest}
+            [$c$ [$a$ [$ca$]] [$b$ [$cb$]] [$c$ [$cc$]]]        
+        \end{forest}
+    \item $k_1$ = $\{a_1, b_1\}$ \\ $k_2$ = $\{a_2, b_2, c_2\}$ \\ $k_3$ = $\{a_3, b_3\}$ \\
+        \begin{forest}
+            [$a_1$ [$a_2$ [$a_3$ [$a_1a_2a_3$]] [$b_3$ [$a_1a_2b_3$]]] [$b_2$ [$a_3$ [$a_1b_2a_3$]] [$b_3$ [$a_1b_2b_3$]]] [$c_2$ [$a_3$ [$a_1c_2a_3$]] [$b_3$ [$a_1c_2b_3$]]]]
+        \end{forest} \\
+        \begin{forest}
+            [$b_1$ [$a_2$ [$a_3$ [$b_1a_2a_3$]] [$b_3$ [$b_1a_2b_3$]]] [$b_2$ [$a_3$ [$b_1b_2a_3$]] [$b_3$ [$b_1b_2b_3$]]] [$c_2$ [$a_3$ [$b_1c_2a_3$]] [$b_3$ [$b_1c_2b_3$]]]]
+        \end{forest}
+\end{enumerate}
+
 
 \end{document}
