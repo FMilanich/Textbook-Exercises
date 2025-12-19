@@ -452,4 +452,21 @@ presents to the same child. In how many ways can we distribute the presents?
     12^{20} = 3833759992447475122176
 \end{align*}
 
+\subsection{Exercise}
+
+We have 20 kinds of presents; this time, we have a large supply from each. We
+want to give presents to 12 children. Again, it is not required that every child gets
+something; but no child can get two copies of the same present. In how many ways can
+we give presents?
+
+\hrulefill\vspace{2mm}
+
+Because a child can either receive a present or not, there's 2 options in a sequence of 20. 
+But then, because there's 12 children, that same sequence has to be repeated 12 times giving us:
+
+\begin{align*}
+    (2^{20})^{12} = 2^{240} \approx 1.767 \times 10^{72}
+\end{align*}
+
+
 \end{document}
