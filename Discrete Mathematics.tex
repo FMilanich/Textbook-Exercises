@@ -477,5 +477,38 @@ simultaneously? (We assume that only couples of different sex dance with each ot
 
 Because there's $n$ boys for $n$ girls, the matchings are exactly one-to-one. The answer is $n!$.
 
+\subsection{Exercise}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item Draw a tree for Alice’s solution of enumerating the number of ways 6 people can play chess, and explain Alice’s argument using the tree.
+    \item Solve the problem for 8 people. Can you give a general formula for 2$n$ people?
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+% At this point I regretted so much deciding to do the trees like this...
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item I'm just going to do the first levels because it doesn't fit, but it illustrates the reasoning. Also, there would be too many nodes in the tree, as the result is $6! = 720$. \\ \\
+        \begin{forest}
+            [Bob [Carl [$\cdots$]] [Diane [$\cdots$]] [Eve [$\cdots$]] [Frank [$\cdots$]] [George [$\cdots$]]]
+        \end{forest}
+        \begin{forest}
+            [Carl [Bob [$\cdots$]] [Diane [$\cdots$]] [Eve [$\cdots$]] [Frank [$\cdots$]] [George [$\cdots$]]]
+        \end{forest}
+        \begin{forest}
+            [Diane [Bob [$\cdots$]] [Carl [$\cdots$]] [Eve [$\cdots$]] [Frank [$\cdots$]] [George [$\cdots$]]]
+        \end{forest}
+        \begin{forest}
+            [Eve [Bob [$\cdots$]] [Carl [$\cdots$]] [Diane [$\cdots$]] [Frank [$\cdots$]] [George [$\cdots$]]]
+        \end{forest}
+        \begin{forest}
+            [Frank [Bob [$\cdots$]] [Carl [$\cdots$]] [Diane [$\cdots$]] [Eve [$\cdots$]] [George [$\cdots$]]]
+        \end{forest}
+        \begin{forest}
+            [George [Bob [$\cdots$]] [Carl [$\cdots$]] [Diane [$\cdots$]] [Eve [$\cdots$]] [Frank [$\cdots$]]]
+        \end{forest}
+    \item Because it's just a permutation, the result for 8 people is $8! = 40320$. For $2n$ people the general formula is just $(2n)!$.
+\end{enumerate}
 
 \end{document}
