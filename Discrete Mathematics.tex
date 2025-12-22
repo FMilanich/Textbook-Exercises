@@ -607,4 +607,24 @@ But, if we are going to prove this by induction, then we need to be a bit more s
 
 As we see, $2(n-1)$ is clearly even and we get that $(n-1)(n-2)$ is out induction hypothesis. As there's at least one even factor, we get that $n(n-1)$ is even.
 
+\subsection{Exercise}
+
+Prove by induction that the sum of the first $n$ positive integers is $n(n+1)/2$.
+
+\hrulefill\vspace{2mm}
+
+Given as our induction hypothesis that
+
+\begin{align*}
+    1 + 2 + \cdots + (n-1) = \frac{(n-1)n}{2} 
+\end{align*}
+
+Now, we can finally do the induction.
+
+\begin{align*}
+    1 + 2 + \cdots + (n-1) + n &= (1 + 2 + \cdots + (n-1)) + n \\ 
+    1 + 2 + \cdots + (n-1) + n &= \left(\frac{(n-1)n}{2}\right) + n \\
+    1 + 2 + \cdots + (n-1) + n &= \frac{n(n+1)}{2}
+\end{align*}
+
 \end{document}
