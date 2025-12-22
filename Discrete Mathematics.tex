@@ -590,4 +590,21 @@ Because there's $n$ boys for $n$ girls, the matchings are exactly one-to-one. Th
     Because $n \to \infty$, and $2^n / n^2$ is bigger is greater than $n$, we can conclude that $2^n / n^2 \to \infty$.
 \end{enumerate}
 
+\subsection{Exercise}
+
+Prove, using induction but also without it, that $n(n-1)$ s an even number for
+every non-negative integer $n$.
+
+\hrulefill\vspace{2mm}
+
+This is quite easy to prove without induction, as every integer is either even or odd. Also, we know that if an integer has an even factor, then it itself is an even number. So, if $n$ is even, then $n(n-1)$ is even, and if $n$ is odd, then $(n-1)$ and $n(n-1)$ are even. \\
+But, if we are going to prove this by induction, then we need to be a bit more specific. We'll use as the induction hypothesis that $(n-1)(n-2)$ is an even integer and proceed like this
+
+\begin{align*}
+    n(n-1) &= [(n-2)+2](n-1) \\
+    n(n-1) &= (n-1)(n-2)+2(n-1)
+\end{align*}
+
+As we see, $2(n-1)$ is clearly even and we get that $(n-1)(n-2)$ is out induction hypothesis. As there's at least one even factor, we get that $n(n-1)$ is even.
+
 \end{document}
