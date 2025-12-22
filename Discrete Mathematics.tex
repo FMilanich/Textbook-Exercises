@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{inputenc}
+\usepackage{inputenc, caption}
 \usepackage{graphicx, float, forest}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{enumitem}
@@ -594,7 +594,7 @@ Because there's $n$ boys for $n$ girls, the matchings are exactly one-to-one. Th
 
 \subsection{Exercise}
 
-Prove, using induction but also without it, that $n(n-1)$ s an even number for
+Prove, using induction but also without it, that $n(n-1)$ is an even number for
 every non-negative integer $n$.
 
 \hrulefill\vspace{2mm}
@@ -638,5 +638,23 @@ many people count 6 handshakes?
 \hrulefill\vspace{2mm}
 
 Well, the youngest person in the room will count $n$ handshakes (the largest number), the second $n-1$, the third $n-2$, etc. So, given that $n \geqslant 6$, the 6th oldest person counts exactly 6 handshakes.
+
+\subsection{Exercise}
+
+Give a proof of exercise 3.1, based on figure 3.
+
+\hrulefill\vspace{2mm}
+
+\begin{figure*}[h]
+    \includegraphics[width=\linewidth]{Discrete-Mathematics-images/fig3.jpg}
+    \captionsetup{labelformat=empty}
+    \caption{Figure 3: The sum of the first $n$ integers}
+    \label{fig:fig3}
+\end{figure*}
+
+In exercise 3.1 we were asked to prove that $n(n-1)$ is an even number for every non-negative integer $n$.
+In the given figure, we can see that for any $n$ consecutive positive integers (in this case there's 5), the product of that number by the next positive integer is even.
+The figure is very graphical, as we can see that it makes a square which is clearly even.
+So, $n(n+1)$ is always even, because it is a product of two consecutive positive integers.
 
 \end{document}
