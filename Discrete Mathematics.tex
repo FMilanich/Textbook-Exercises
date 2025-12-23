@@ -715,4 +715,30 @@ It's trivial to prove that $2S$ is even, so $n(n+1)$ is also even. Now, if $n$ i
 
 We get to the same result as with the other case, so we can conclude that $n(n+1)$ is even for every positive integer $n$.
 
+\subsection{Exercise}
+
+How would the little Gauss prove the formula for the sum of the first $n$ odd numbers (2)?
+
+\hrulefill\vspace{2mm}
+
+Well, I guess the little Gauss would deduce a formula for the $n$th element like this
+
+\begin{align*}
+    S = 1 + 3 + \cdots + (2n - 3) + (2n - 1)
+\end{align*}
+
+Then he would pair the first with the last term, the second with the second to last, etc.
+
+\begin{align*}
+    S = [1 + (2n - 1)] + [3 + (2n -3)] + \cdots
+\end{align*}
+
+If we look at it, we get that every pair has the value $2n$ and there's exactly $n/2$ of them.
+Knowing this, we can derive the formula we want to prove.
+
+\begin{align*}
+    S &= \frac{n}{2} \cdot 2n \\
+    S &= n^2
+\end{align*}
+
 \end{document}
