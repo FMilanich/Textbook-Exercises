@@ -683,4 +683,36 @@ With this in mind, let's do the induction
     1 \cdot 2 + 2 \cdot 3 + 3 \cdot 4 + \cdots + (n-1) \cdot n &= \frac{(n-1) \cdot n \cdot (n+1)}{3}
 \end{align*}
 
+\subsection{Exercise}
+
+Use the method of the little Gauss to give a third proof of the formula in exercise 3.1
+
+\hrulefill\vspace{2mm}
+
+Again, in exercise 3.1 we were asked to prove that $n(n-1)$ is an even number for every non-negative integer $n$.
+Our little Gauss postulated something similar to this
+
+\begin{align*}
+    S &= 1 + 2 + 3 + \cdots + n \\
+    S &= (1+n) + [2+(n-1)] + [3+(n-2)] + \cdots + \left[\frac{n}{2} + \left[ \left(\frac{n}{2}\right) + 1\right] \right]
+\end{align*}
+
+Knowing this, we can make up two cases, when $n$ is even and when $n$ is odd. If $n$ is even the pairs are exactly $n/2$, so we can develop it in a straightfoward way.
+
+\begin{align*}
+    S &= \frac{n}{2} \cdot (n+1) \\
+    2S &= n(n+1)
+\end{align*}
+
+It's trivial to prove that $2S$ is even, so $n(n+1)$ is also even. Now, if $n$ is odd, then there's exactly $(n-1)/2$ pairs with one unpaired term $(n+1)/2$.
+
+\begin{align*}
+    S &= \frac{n-1}{2} \cdot (n+1) + \frac{n+1}{2} \\
+    S &= \frac{n+1}{2} \cdot \left((n-1)+1\right) \\
+    S &= \frac{n}{2} \cdot (n+1) \\
+    2S &= n(n+1)
+\end{align*}
+
+We get to the same result as with the other case, so we can conclude that $n(n+1)$ is even for every positive integer $n$.
+
 \end{document}
