@@ -741,4 +741,29 @@ Knowing this, we can derive the formula we want to prove.
     S &= n^2
 \end{align*}
 
+\subsection{Exercise}
+
+Prove that the sum of the first $n$ squares $(1+4+9+\cdots+n^2)$ is $n(n+1)(2n+1)/6$.
+
+\hrulefill\vspace{2mm}
+
+To do this, I'm going to use as the induction hypothesis the following equation:
+
+\begin{align*}
+    1 + 4 + 9 + \cdots + (n-1)^2 &= \frac{(n-1)n(2(n-1)+1)}{6} \\
+    1 + 4 + 9 + \cdots + (n-1)^2 &= \frac{(n-1)n(2n-1)}{6}
+\end{align*}
+
+Having this in mind, we can expand our original sequence of sums to prove the postulated formula.
+
+\begin{align*}
+    1 + 4 + 9 + \cdots + n^2 &= [1 + 4 + 9 + \cdots + (n-1)^2] + n^2 \\
+    1 + 4 + 9 + \cdots + n^2 &= \frac{(n-1)n(2n-1)}{6} + n^2 \\
+    1 + 4 + 9 + \cdots + n^2 &= \frac{n(2n^2-3n+1)+6n^2}{6} \\
+    1 + 4 + 9 + \cdots + n^2 &= \frac{2n^3-3n^2+n+6n^2}{6} \\
+    1 + 4 + 9 + \cdots + n^2 &= \frac{2n^3+3n^2+n}{6} \\
+    1 + 4 + 9 + \cdots + n^2 &= \frac{n(2n^2+3n+1)}{6} \\
+    1 + 4 + 9 + \cdots + n^2 &= \frac{n(n+1)(2n+1)}{6}
+\end{align*}
+
 \end{document}
