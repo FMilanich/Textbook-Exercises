@@ -766,4 +766,28 @@ Having this in mind, we can expand our original sequence of sums to prove the po
     1 + 4 + 9 + \cdots + n^2 &= \frac{n(n+1)(2n+1)}{6}
 \end{align*}
 
+\subsection{Exercise}
+
+Prove that the sum of the first $n$ powers of 2 (starting with $1=2^0$) is $2^n-1$.
+
+\hrulefill\vspace{2mm}
+
+To prove this, I'm going to use as the induction hypothesis that
+
+\begin{align*}
+    2^0 + 2^1 + 2^2 + \cdots + 2^{n-1} = 2^{n} - 1
+\end{align*}
+
+With this in mind, let's expand the sequence of sums postulated.
+
+\begin{align*}
+    2^0 + 2^1 + 2^2 + \cdots + 2^{n} &= [2^0 + 2^1 + 2^2 + \cdots + 2^{n-1}] + 2^{n} \\
+    2^0 + 2^1 + 2^2 + \cdots + 2^{n} &= (2^{n} - 1) + 2^{n} \\
+    2^0 + 2^1 + 2^2 + \cdots + 2^{n} &= 2 \cdot 2^n - 1 \\
+    2^0 + 2^1 + 2^2 + \cdots + 2^{n} &= 2^{n+1} \\
+\end{align*}
+
+This induction was quite different from the other ones, as I used as the induction hypothesis the proposed formula, but as it acomplishes the case for $n+1$, then it's true for all cases.
+I could have probably done this with $n-2$, but I felt this was a more natural way to do it.
+
 \end{document}
