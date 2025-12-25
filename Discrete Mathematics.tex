@@ -790,4 +790,27 @@ With this in mind, let's expand the sequence of sums postulated.
 This induction was quite different from the other ones, as I used as the induction hypothesis the proposed formula, but as it acomplishes the case for $n+1$, then it's true for all cases.
 I could have probably done this with $n-2$, but I felt this was a more natural way to do it.
 
+\subsection{Exercise}
+
+Use induction to prove Theorem 2.2 (the number of strings of length $n$ composed of $k$ given elements is $k^n$) and Theorem 2 (the number of permutations of a set with $n$ elements is $n!$).
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item We're going to use as the induction hypothesis that the number of strings of length $(n-1)$ composed of $k$ given elements is $k^{n-1}$.
+    With this in mind, let's formulate what would be the formula for strings of length $n$.
+    \begin{align*}
+        S &= k_1 \cdot k_2 \cdot \ldots \cdot k_{n-1} \cdot k_n \\
+        S &= [k_1 \cdot k_2 \cdot \ldots \cdot k_{n-1}] \cdot k_n \\
+        S &= k^{n-1} \cdot k_n \\
+        S &= k^n
+    \end{align*}
+    \item This is quite similar to what we did before. Taking as the induction hypothesis that the number of permutations of $(n-1)$ objects is $(n-1)!$, we can develop our formula for $n$ permutations like this
+    \begin{align*}
+        P &= (n-1)! \cdot n \\
+        P &= n!
+    \end{align*}
+    Why is this true, because, as we already saw in the tree diagram, when we add one object to the permutations, we can instert it either at the beginning or after any other. So the number of permutations multiply by $n$, giving us $n!$.
+\end{enumerate}
+
 \end{document}
