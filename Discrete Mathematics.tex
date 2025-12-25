@@ -810,7 +810,23 @@ Use induction to prove Theorem 2.2 (the number of strings of length $n$ composed
         P &= (n-1)! \cdot n \\
         P &= n!
     \end{align*}
-    Why is this true, because, as we already saw in the tree diagram, when we add one object to the permutations, we can instert it either at the beginning or after any other. So the number of permutations multiply by $n$, giving us $n!$.
+    This is true because the $n$th element can be inserted in any of $n$ positions.
 \end{enumerate}
+
+\subsection{Exercise}
+
+Use induction on $n$ to prove the ``handshake theorem'' (the number of handshakes
+between $n$ people in $n(n-1)/2$).
+
+\hrulefill\vspace{2mm}
+
+Using as the induction hypothesis that the number of handshakes between $(n-1)$ people is $(n-1)(n-2)/2$ we get that the $n$th person can handshake once each one of the $(n-1)$ persons.
+With this in mind, let's expand the formula.
+
+\begin{align*}
+    \frac{(n-1)(n-2)}{2} + (n-1) &= \frac{(n-1)(n-2)+2(n-1)}{2} \\
+    \frac{(n-1)(n-2)}{2} + (n-1) &= \frac{(n-1)[(n-2)+2]}{2} \\
+    \frac{(n-1)(n-2)}{2} + (n-1) &= \frac{n(n-1)}{2}
+\end{align*}
 
 \end{document}
