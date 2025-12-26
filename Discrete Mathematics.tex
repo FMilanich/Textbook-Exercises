@@ -829,4 +829,23 @@ With this in mind, let's expand the formula.
     \frac{(n-1)(n-2)}{2} + (n-1) &= \frac{n(n-1)}{2}
 \end{align*}
 
+\subsection{Exercise}
+
+Read carefully the following induction proof: \\
+
+Assertion: $n(n+1)$ is an odd number for every $n$. \\
+
+Proof: Suppose that this is true for $n-1$ in place of $n$; we prove it for $n$, using the
+induction hypothesis. We have
+\begin{align*}
+    n(n+1) = (n-1)n + 2n.
+\end{align*}
+Now here $(n-1)n$ is odd by the induction hypothesis, and $2n$ is even. Hence $n(n+1)$ is the sum of an odd number and an even number, which is odd. \\
+
+The assertion that we proved is obviously wrong for $n = 10$: $10 \cdot 11 = 110$ is even. What is wrong with the proof?
+
+\hrulefill\vspace{2mm}
+
+The problem here is that there's no base case for the induction. As we see, if $n=1$ then the hypothesis ($n-1=0$) becomes $0(0+1)=0$, which it's even. As the induction hypothesis is incorrect, the whole proof becomes invalid.
+
 \end{document}
