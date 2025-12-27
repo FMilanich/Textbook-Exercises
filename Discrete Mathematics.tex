@@ -848,4 +848,33 @@ The assertion that we proved is obviously wrong for $n = 10$: $10 \cdot 11 = 110
 
 The problem here is that there's no base case for the induction. As we see, if $n=1$ then the hypothesis ($n-1=0$) becomes $0(0+1)=0$, which it's even. As the induction hypothesis is incorrect, the whole proof becomes invalid.
 
+\subsection{Exercise}
+
+Read carefully the following induction proof: \\
+
+Assertion: If we have $n$ lines in the plane, no two of which are parallel, then they all
+go through one point. \\
+
+Proof: The assertion is true for one line (and also for 2, since we have assumed that
+no two lines are parallel). Suppose that it is true for any set of $n-1$ lines. We are
+going to prove that it is also true for $n$ lines, using this induction hypothesis. \\
+So consider a set of $S = \{a, b, c, d, \dots\}$ of $n$ lines in the plane, no two of which are
+parallel. Delete the line $c$, then we are left with a set $S'$ of $n-1$ lines, and obviously no
+two of these are parallel. So we can apply the induction hypothesis and conclude that
+there is a point $P$ such that all the lines in $S'$ go through $P$. In particular, $a$ and $b$ go through $P$, and so $P$ must be the point of intersection of $a$ and $b$. \\
+Now put $c$ back and delete $d$, to get the set $S''$ of $n-1$ lines. Just as above, we can use
+the induction hypothesis to conclude that these lines go through the same point $P'$; but
+just like above, $P'$ must be the point of intersection of $a$ and $b$. Thus $P' = P$. But then
+we see that $c$ goes through $P$. The other lines also go through $P$ (by the choice of $P$), and so all the $n$ lines go through $P$. \\
+
+But the assertion we proved is clearly wrong; where is the error?
+
+\hrulefill\vspace{2mm}
+
+The proof is wrong because it's using the induction hypothesis in a situation where it doesn't apply.
+Basically, two lines which are not parallel are going to intersect in a plane, but if there's more than two, they'll not meet in the same point.
+Because the hypothesis breaks when $n = 3$, then it can't be used for a generalization like $(n-1)$. \\
+This is exactly the opposite problem to the last exercise. In that case, the generalization seems correct, but it doesn't stand for the base case.
+In this case, the base case is correct, but it breaks easily in a general case (like $S'$ and $S''$).
+
 \end{document}
