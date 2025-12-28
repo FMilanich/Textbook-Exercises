@@ -872,9 +872,24 @@ But the assertion we proved is clearly wrong; where is the error?
 \hrulefill\vspace{2mm}
 
 The proof is wrong because it's using the induction hypothesis in a situation where it doesn't apply.
-Basically, two lines which are not parallel are going to intersect in a plane, but if there's more than two, they'll not meet in the same point.
-Because the hypothesis breaks when $n = 3$, then it can't be used for a generalization like $(n-1)$. \\
-This is exactly the opposite problem to the last exercise. In that case, the generalization seems correct, but it doesn't stand for the base case.
-In this case, the base case is correct, but it breaks easily in a general case (like $S'$ and $S''$).
+Basically, the point of intersection $P$ and $P'$ may not be the same, as the hypothesis never tells us that they must be the same.
+So then, the induction step fails as the hypothesis isn't useful enough to prove the general case.
+
+\subsection{Exercise}
+
+Describe a proof of Theorem 3.1 using induction on the number of lines.
+
+\hrulefill\vspace{2mm}
+
+Theorem 3.1 says like this: a set of $n$ lines in general position in the plane divides the plane into $1 + n(n+1)/2$ regions.
+To solve this, we're going to use as the induction hypothesis that it is true for $(n-1)$, so
+\begin{align*}
+    1 + [1 + 2 + 3 + \cdots + (n-1)] + n &= 1 + \frac{(n-1)n}{2} + n \\
+    1 + [1 + 2 + 3 + \cdots + (n-1)] + n &= 1 + \frac{(n-1)n + 2n}{2} \\
+    1 + [1 + 2 + 3 + \cdots + (n-1)] + n &= 1 + \frac{n^2 - n + 2n}{2} \\
+    1 + [1 + 2 + 3 + \cdots + (n-1)] + n &= 1 + \frac{n^2 + n}{2} \\
+    1 + [1 + 2 + 3 + \cdots + (n-1)] + n &= 1 + \frac{n(n+1)}{2}
+\end{align*}
+With this, we proved Theorem 3.1 using induction.
 
 \end{document}
