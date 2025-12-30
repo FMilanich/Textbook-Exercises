@@ -892,4 +892,29 @@ To solve this, we're going to use as the induction hypothesis that it is true fo
 \end{align*}
 With this, we proved Theorem 3.1 using induction.
 
+\section{Counting subsets}
+
+\subsection{Exercise}
+
+Illustrate this argument by a tree.
+
+\hrulefill\vspace{2mm}
+
+The argument says something like this: if in a competition there's 100 athletes and only the order of the first 10 is recorded, then there's $100 \cdot 99 \cdot \ldots \cdot 91$ different outcomes for the competition.
+The tree to illustrate this argument is really big, so i'm only going to do it partially. \\
+% Really, with this kind of exercises I don't really understand what they want me to do.
+\\
+\begin{forest}
+    [$100$ [$99$ [$\cdots$]] [$98$ [$\cdots$]] [$97$ [$\cdots$]] [$96$ [$\cdots$]] [$95$ [$\cdots$]] [$94$ [$\cdots$]] [$93$ [$\cdots$]] [$92$ [$\cdots$]] [$91$ [$\cdots$]] [$90$ [$\cdots$]] [$89$ [$\cdots$]] [$88$ [$\cdots$]] [$\cdots$ [$\cdots$]]]
+\end{forest} \\
+\begin{forest}
+    [$99$ [$99$ [$\cdots$]] [$98$ [$\cdots$]] [$97$ [$\cdots$]] [$96$ [$\cdots$]] [$95$ [$\cdots$]] [$94$ [$\cdots$]] [$93$ [$\cdots$]] [$92$ [$\cdots$]] [$91$ [$\cdots$]] [$90$ [$\cdots$]] [$89$ [$\cdots$]] [$88$ [$\cdots$]] [$\cdots$ [$\cdots$]]]
+\end{forest} \\
+\begin{forest}
+    [$98$ [$99$ [$\cdots$]] [$98$ [$\cdots$]] [$97$ [$\cdots$]] [$96$ [$\cdots$]] [$95$ [$\cdots$]] [$94$ [$\cdots$]] [$93$ [$\cdots$]] [$92$ [$\cdots$]] [$91$ [$\cdots$]] [$90$ [$\cdots$]] [$89$ [$\cdots$]] [$88$ [$\cdots$]] [$\cdots$ [$\cdots$]]]
+\end{forest} \\
+\begin{forest}
+    [$\cdots$ [$99$ [$\cdots$]] [$98$ [$\cdots$]] [$97$ [$\cdots$]] [$96$ [$\cdots$]] [$95$ [$\cdots$]] [$94$ [$\cdots$]] [$93$ [$\cdots$]] [$92$ [$\cdots$]] [$91$ [$\cdots$]] [$90$ [$\cdots$]] [$89$ [$\cdots$]] [$88$ [$\cdots$]] [$\cdots$ [$\cdots$]]]
+\end{forest}
+
 \end{document}
