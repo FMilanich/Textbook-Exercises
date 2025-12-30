@@ -917,4 +917,32 @@ The tree to illustrate this argument is really big, so i'm only going to do it p
     [$\cdots$ [$99$ [$\cdots$]] [$98$ [$\cdots$]] [$97$ [$\cdots$]] [$96$ [$\cdots$]] [$95$ [$\cdots$]] [$94$ [$\cdots$]] [$93$ [$\cdots$]] [$92$ [$\cdots$]] [$91$ [$\cdots$]] [$90$ [$\cdots$]] [$89$ [$\cdots$]] [$88$ [$\cdots$]] [$\cdots$ [$\cdots$]]]
 \end{forest}
 
+\subsection{Exercise}
+
+Suppose that we record the order of all 100 athletes.
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item How many different outcomes can we have then?
+    \item How many of these give the same for the first 10 places?
+    \item Show that the result above for the number of possible outcomes for the first 10 places can be also obtained using (a) and (b).
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item The number of outcomes is a permutation, like the ones we saw in chapter 2.5.
+    \begin{align*}
+        100! = 100 \cdot 99 \cdot \ldots \cdot 1
+    \end{align*}
+    \item My guess is that, because we can't change the first 10, we are only ordering the last 90. So the result would be
+    \begin{align*}
+        90! = 90 \cdot 89 \cdot \ldots \cdot 1
+    \end{align*}
+    \item In effect, the number of possible outcomes for the first 10 places is
+    \begin{align*}
+        100! - 90! &= (100 \cdot 99 \cdot \ldots \cdot 1) - (90 \cdot 89 \cdot \ldots \cdot 1) \\
+        100! - 90! &= (100 \cdot 99 \cdot \ldots \cdot 91)
+    \end{align*}
+\end{enumerate}
+
 \end{document}
