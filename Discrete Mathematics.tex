@@ -940,9 +940,28 @@ Suppose that we record the order of all 100 athletes.
     \end{align*}
     \item In effect, the number of possible outcomes for the first 10 places is
     \begin{align*}
-        100! - 90! &= (100 \cdot 99 \cdot \ldots \cdot 1) - (90 \cdot 89 \cdot \ldots \cdot 1) \\
-        100! - 90! &= (100 \cdot 99 \cdot \ldots \cdot 91)
+        \frac{100!}{90!} &= \frac{100 \cdot 99 \cdot \ldots \cdot 1}{90 \cdot 89 \cdot \ldots \cdot 1} \\
+        \frac{100!}{90!} &= 100 \cdot 99 \cdot \ldots \cdot 91
     \end{align*}
 \end{enumerate}
+
+\subsection{Exercise}
+
+If you generalize the solution of exercise 4.1, you get the answer in the form
+\begin{align*}
+    \frac{n!}{(n-k)!}
+\end{align*}
+Check that this is the same number as given in theorem 4.1.
+
+\hrulefill\vspace{2mm}
+
+I've already used that formula in the last exercise, so I know it's correct. But let's prove it using the theorem.
+
+\begin{align*}
+    \frac{n!}{(n-k)!} &= \frac{n \cdot (n-1) \cdot \ldots \cdot 1}{(n-k) \cdot [(n-k)-1] \cdot \ldots \cdot 1} \\
+    \frac{n!}{(n-k)!} &= \frac{n \cdot (n-1) \cdot \ldots \cdot [(n-k) + 1] \cdot (n-k) \cdot [(n-k) - 1] \cdot \ldots \cdot 1}{(n-k) \cdot [(n-k)-1] \cdot \ldots \cdot 1} \\
+    \frac{n!}{(n-k)!} &= n \cdot (n-1) \cdot \ldots \cdot [(n-k) + 1] \cdot \frac{(n-k) \cdot [(n-k) - 1] \cdot \ldots \cdot 1}{(n-k) \cdot [(n-k)-1] \cdot \ldots \cdot 1} \\
+    \frac{n!}{(n-k)!} &= n \cdot (n-1) \cdot \ldots \cdot [(n-k) + 1]
+\end{align*}
 
 \end{document}
