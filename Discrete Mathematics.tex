@@ -1002,4 +1002,62 @@ And, although a bit different from how they solved it, the chess board problem c
     \binom{6}{2} = \frac{6!}{2!(6-2)!} = 15
 \end{align*}
 
+\subsection{Exercise}
+
+Tabulate the values of $\binom{n}{k}$ for $n,k \leqslant 5$.
+
+\hrulefill\vspace{2mm}
+
+I've omitted the cases where $k > n$, because it's 0 and it repeats quite often if I tabulate all the possibilities.
+
+\begin{center}
+    \begin{tabular}{||c c c||} 
+    \hline
+        $n$ & $k$ & $\binom{n}{k}$ \\ [0.5ex] 
+        \hline\hline
+        0 & 0 & 1 \\ 
+        \hline
+        1 & 0 & 1 \\
+        \hline
+        1 & 1 & 1 \\
+        \hline
+        2 & 0 & 1 \\
+        \hline
+        2 & 1 & 2 \\
+        \hline
+        2 & 2 & 1 \\
+        \hline
+        3 & 0 & 1 \\
+        \hline
+        3 & 1 & 3 \\
+        \hline
+        3 & 2 & 3 \\
+        \hline
+        3 & 3 & 1 \\
+        \hline
+        4 & 0 & 1 \\
+        \hline
+        4 & 1 & 4 \\
+        \hline
+        4 & 2 & 6 \\
+        \hline
+        4 & 3 & 4 \\
+        \hline
+        4 & 4 & 1 \\
+        \hline
+        5 & 0 & 1 \\
+        \hline
+        5 & 1 & 5 \\
+        \hline
+        5 & 2 & 10 \\
+        \hline
+        5 & 3 & 10 \\
+        \hline
+        5 & 4 & 5 \\
+        \hline
+        5 & 5 & 1 \\
+        \hline
+    \end{tabular}
+\end{center}
+
 \end{document}
