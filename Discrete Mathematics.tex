@@ -1060,4 +1060,25 @@ I've omitted the cases where $k > n$, because it's 0 and it repeats quite often 
     \end{tabular}
 \end{center}
 
+\subsection{Exercise}
+
+Prove that $\binom{n}{2} + \binom{n+1}{2} = n^2$.
+
+\hrulefill\vspace{2mm}
+
+\begin{align*}
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n!}{2!(n-2)!} + \frac{(n+1)!}{2![(n+1)-2]!} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n!}{2 \cdot (n-2)!} + \frac{(n+1)!}{2 \cdot (n-1)(n-2)!} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n!}{2 \cdot (n-2)!} + \frac{(n+1)n(n-1)(n-2)!}{2 \cdot (n-1)(n-2)!} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n!}{2 \cdot (n-2)!} + \frac{(n+1)n(n-2)!}{2 \cdot (n-2)!} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n! + (n+1)n(n-2)!}{2 \cdot (n-2)!} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n(n-1)(n-2)! + (n+1)n(n-2)!}{2 \cdot (n-2)!} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n(n-1) + (n+1)n}{2} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{n^2-n+n^2+n}{2} \\
+    \binom{n}{2} + \binom{n+1}{2} &= \frac{2n^2}{2} \\
+    \binom{n}{2} + \binom{n+1}{2} &= n^2
+\end{align*}
+
+
+
 \end{document}
