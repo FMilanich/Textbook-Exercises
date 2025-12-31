@@ -1079,6 +1079,40 @@ Prove that $\binom{n}{2} + \binom{n+1}{2} = n^2$.
     \binom{n}{2} + \binom{n+1}{2} &= n^2
 \end{align*}
 
+\subsection{Exercise}
 
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item Prove that $\binom{90}{5} = \binom{89}{5} + \binom{89}{4}$.
+    \item Formulate and prove a general identity based on this.
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item 
+    \begin{align*}
+        \binom{89}{5} + \binom{89}{4} &= \frac{89!}{5!(89-5)!} + \frac{89!}{4!(89-4)!} \\
+        \binom{89}{5} + \binom{89}{4} &= \frac{89!}{5!84!} + \frac{89!}{4!85!} \\
+        \binom{89}{5} + \binom{89}{4} &= \frac{89!}{5!(85!/85)} + \frac{89!}{(5!/5)85!} \\
+        \binom{89}{5} + \binom{89}{4} &= \frac{89! \cdot 85}{5!85!} + \frac{89! \cdot 5}{5!85!} \\
+        \binom{89}{5} + \binom{89}{4} &= \frac{89!(85+5)}{5!85!} \\
+        \binom{89}{5} + \binom{89}{4} &= \frac{90!}{5!85!} \\
+        \binom{89}{5} + \binom{89}{4} &= \binom{90}{5}
+    \end{align*}
+    \item The general identity we can formulate from this example is this
+    \begin{align*}
+        \binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}
+    \end{align*}
+    Now, let's try to prove it algebraically the same way we did with point (a)
+    \begin{align*}
+        \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!}{k![(n-1)-k]!} + \frac{(n-1)!}{(k-1)![(n-1)(k-1)]!} \\
+        \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!}{k!(n-k-1)!} + \frac{(n-1)!}{(k-1)!(n-k)!} \\
+        \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!(n-k)}{k!(n-k)!} + \frac{(n-1)!k}{k!(n-k)!} \\
+        \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!(n-k+k)}{k!(n-k)!} \\
+        \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!n}{k!(n-k)!} \\
+        \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{n!}{k!(n-k)!} \\
+        \binom{n-1}{k} + \binom{n-1}{k-1} &= \binom{n}{k}
+    \end{align*}
+\end{enumerate}
 
 \end{document}
