@@ -1138,4 +1138,22 @@ Prove that
 
 This might not be an algebraic proof, but I think we can argue that this is a way of trying to number all the possible subsets for $n$ size set. 1 would be $\binom{n}{0}$, and then we group all the possibilities of any $1, 2, \cdots, (n-1)$ and $n$ size subsets. And we already know from Theorem 2.1 that a set with $n$ elements has $2^n$ subsets.
 
+\subsection{Exercise}
+
+Prove that for $0 < c \leqslant b \leqslant a$,
+\begin{align*}
+    \binom{a}{b}\binom{b}{c} = \binom{a}{a-c}\binom{a-c}{b-c}
+\end{align*}
+
+\hrulefill\vspace{2mm}
+
+\begin{align*}
+    \binom{a}{b}\binom{b}{c} &= \frac{a!}{b!(a-b)!} \cdot \frac{b!}{c!(b-c)!} \\
+    \binom{a}{b}\binom{b}{c} &= \frac{a!}{c!(a-b)!(b-c)!} \\
+    \binom{a}{b}\binom{b}{c} &= \frac{a!}{c!(a-c)!} \cdot \frac{(a-c)!}{(b-c)!(a-b)!} \\
+    \binom{a}{b}\binom{b}{c} &= \frac{a!}{c!(a-c)!} \cdot \frac{(a-c)!}{(b-c)!((a-c)-(b-c))!} \\
+    \binom{a}{b}\binom{b}{c} &= \binom{a}{c} \binom{a-c}{b-c} \\
+    \binom{a}{b}\binom{b}{c} &= \binom{a}{a-c} \binom{a-c}{b-c}
+\end{align*}
+
 \end{document}
