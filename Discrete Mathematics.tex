@@ -1156,4 +1156,50 @@ Prove that for $0 < c \leqslant b \leqslant a$,
     \binom{a}{b}\binom{b}{c} &= \binom{a}{a-c} \binom{a-c}{b-c}
 \end{align*}
 
+\subsection{Exercise}
+
+Give a proof of the Binomial Theorem by induction, based on exercise 4.2.
+
+\hrulefill\vspace{2mm}
+
+To do this, I'm going to use as the induction hypothesis that
+
+\begin{align*}
+    (x+y)^{n-1} &= x^{n-1}  + \binom{n-1}{1} x^{n-2}y + \cdots + \binom{n-1}{n-2} xy^{n-2} + \binom{n-1}{n-1} y^{n-1}
+\end{align*}
+
+This is just the Binomial Theorem for $n-1$. Now, with this in mind, let's try it for $(x+y)^{n}$.
+
+\begin{align*}
+    (x+y)^{n} &= (x+y)^{n-1}(x+y) \\
+    (x+y)^{n} &= \left[ x^{n-1}  + \binom{n-1}{1} x^{n-2}y + \cdots + \binom{n-1}{n-2} xy^{n-2} + \binom{n-1}{n-1} y^{n-1} \right] (x+y) \\
+    (x+y)^{n} &= x^{n-1}(x+y)  + \binom{n-1}{1} x^{n-2}y(x+y) + \cdots + \binom{n-1}{n-2} xy^{n-2}(x+y) + \binom{n-1}{n-1} y^{n-1}(x+y) \\
+    (x+y)^{n} &= (x^{n}+x^{n-1}y)  + \binom{n-1}{1} (x^{n-1}y+x^{n-2}y^2) + \cdots \\ &+ \binom{n-1}{n-2} (x^{2}y^{n-2}+xy^{n-1}) + \binom{n-1}{n-1} (xy^{n-1}+y^n)
+\end{align*}
+
+Here I'm going to combine like terms, as each one appears twice but with different coefficients.
+
+\begin{align*}
+    (x+y)^{n} &= x^n + \left[ 1 + \binom{n-1}{1} \right](x^{n-1}y+x^{n-2}y) + \cdots + \left[ \binom{n-1}{n-2} + \binom{n-1}{n-1} \right] xy^{n-1} + y^n
+\end{align*}
+
+Now, from exercise 4.2 (c) let's get a general principle. In that exercise, we got that
+
+\begin{align*}
+    \binom{100}{10} &= \binom{99}{9} + \binom{99}{10}
+\end{align*}
+
+This is the same as
+
+\begin{align*}
+    \binom{n}{k} &= \binom{n-1}{k-1} + \binom{n-1}{k}
+\end{align*}
+
+Finally, we can prove the Binomial Theorem using this identity on the coefficients.
+
+\begin{align*}
+    (x+y)^{n} &= x^n + \binom{n}{1}x^{n-1}y + \binom{n}{2}x^{n-2}y^2 + \cdots + \binom{n}{n-1} xy^{n-1} + y^n
+\end{align*}
+
+
 \end{document}
