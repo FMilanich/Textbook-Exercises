@@ -1201,5 +1201,32 @@ Finally, we can prove the Binomial Theorem using this identity on the coefficien
     (x+y)^{n} &= x^n + \binom{n}{1}x^{n-1}y + \binom{n}{2}x^{n-2}y^2 + \cdots + \binom{n}{n-1} xy^{n-1} + y^n
 \end{align*}
 
+\subsection{Exercise}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item Prove the identity
+    \begin{align*}
+        \binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \binom{n}{3} \cdots = 0
+    \end{align*}
+    (The sum ends with $\binom{n}{n} = 1$, with the last depending on the parity of $n$.)
+    \item This identity is obvious if $n$ is odd. Why?
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item To prove this we need the Binomial Theorem for $y = 1$ and $x = -1$.
+    \begin{align*}
+        (x + y)^n &= y^n + \binom{n}{1} x^{n-1}y + \binom{n}{2} x^{n-2}y^2 + \cdots + \binom{n}{n-1} x^{n-1}y + \binom{n}{n} x^n \\
+        ((-1) + 1)^n &= 1^n + \binom{n}{1} (-1)^{n-1} \cdot 1 + \binom{n}{2} (-1)^{n-2} \cdot 1 + \cdots + \binom{n}{n-1} (-1)^{n-1} \cdot 1 + \binom{n}{n} (-1)^n \\
+        0 &= \binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \binom{n}{3} \cdots
+    \end{align*}
+    \item If $n$ is odd, then we can prove this more easily by pairing terms in the form $\binom{n}{k} = \binom{n}{n-k}$
+    \begin{align*}
+        0 &= \binom{n}{k}(-1)^k + \binom{n}{n-k}(-1)^{n-k} \\
+        0 &= \binom{n}{k} [(-1)^k - (-1)^k]
+    \end{align*}
+    This is true because, if $n$ is odd you can make pairs (ironically) and there's exactly $n/2$ positive terms for $n/2$ negative terms that cancel out each other. This makes the result $0$.
+\end{enumerate}
 
 \end{document}
