@@ -1244,4 +1244,24 @@ For reference, this is identity 4
 As we recall form Theorem 2.1, a set with $n$ elements has $2^n$ subsets and the right side of the equation can be seen as the
 sum of all the subsets with 0, 1, 2, 3, ..., $n-1$ and $n$ elements.
 
+\subsection{Exercise}
+
+We can describe the procedure of distributing the presents as follows. First, we
+select $n_1$ presents and give them to the first child. This can be done in $\binom{n}{n_1}$ ways.
+Then we select $n_2$ presents from the remaining $n-n_1$ and give them to the second
+child, etc. \\
+Complete this argument and show that it leads to the same result as the previous one.
+
+\hrulefill\vspace{2mm}
+
+\begin{align*}
+    \frac{n!}{n_1! n_2! \cdots n_k!} &= \binom{n}{n_1} \cdot \binom{n-n_1}{n_2} \cdot \ldots \cdot \binom{n-n_1-\cdots-n_{k-2}}{n_{k-1}} \cdot \binom{n-n_1-\cdots-n_{k-1}}{n_k} \\
+    \frac{n!}{n_1! n_2! \cdots n_k!} &= \binom{n}{n_1} \cdot \binom{n-n_1}{n_2} \cdot \ldots \cdot \binom{n-n_1-\cdots-n_{k-2}}{n_{k-1}} \cdot \binom{n_k}{n_k} \\
+    \frac{n!}{n_1! n_2! \cdots n_k!} &= \binom{n}{n_1} \cdot \binom{n-n_1}{n_2} \cdot \ldots \cdot \binom{n-n_1-\cdots-n_{k-2}}{n_{k-1}} \\
+    \frac{n!}{n_1! n_2! \cdots n_k!} &= \frac{n!}{n_1!(n-n_1)!} \cdot \frac{(n-n_1)!}{n_2!(n-n_1-n_2)!} \cdots \frac{(n-n_1-\cdots-n_{k-2})!}{n_{k-1}!(n-n_1-\cdots-n_{k-1})!} \\
+    \frac{n!}{n_1! n_2! \cdots n_k!} &= \frac{n!}{n_1! n_2! \cdots n_{k-1}!(n-n_1-\cdots-n_{k-1})!}
+\end{align*}
+
+This is true as $n-n_1-\cdots-n_{k-1} = n_k$.
+
 \end{document}
