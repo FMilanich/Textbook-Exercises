@@ -1264,4 +1264,46 @@ Complete this argument and show that it leads to the same result as the previous
 
 This is true as $n-n_1-\cdots-n_{k-1} = n_k$.
 
+\subsection{Exercise}
+
+The following special cases should be familiar from previous problems and theorems. Explain why.
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item $n = k$, $n_1 = n_2 = \cdots = n_k$;
+    \item $n_1 = n_2 = \cdots = n_{k-1} = 1$, $n_k = n - k + 1$;
+    \item $k = 2$;
+    \item $k = 3$, $n = 6$, $n_1 = n_2 = n_3 = 2$.
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item I'm guessing the exercise means $n_1 = n_2 = \cdots = n_k = 1$, so it'd be
+    \begin{align*}
+        \frac{k!}{1! 1! \cdots 1!} = k!
+    \end{align*}
+    This is just the number of possible permutations.
+    \item 
+    \begin{align*}
+        \frac{n!}{1! 1! \cdots 1! (n-k+1)!} = \frac{n!}{(n-k+1)!}
+    \end{align*}
+    If we manipulate algebraically this a bit, we get the number of permutations without repetitions (but of $k+1$ instead of $k$, for some reason).
+    \begin{align*}
+        \frac{n!}{(n-k+1)!} &= \frac{n (n-1) \cdots (n-k+2)(n-k+1)!}{(n-k+1)!} \\
+        \frac{n!}{(n-k+1)!} &= n (n-1) \cdots (n-k+2)
+    \end{align*}
+    \item If $k=2$, then $n_1 + n_2 = n$ and we get
+    \begin{align*}
+        \frac{n!}{n_1! n_2!} &= \frac{n!}{n_1!(n-n_1)!} \\
+        \frac{n!}{n_1! n_2!} &= \binom{n}{n_1}
+    \end{align*}
+    This is just a binomial coefficient. It's the number of $k$-subsets of an $n$-set.
+    \item This is the number of chess seatings in Diane's sense at the beginning of the book.
+    \begin{align*}
+        \frac{6!}{2! 2! 2!} &= \frac{720}{8} \\
+        \frac{6!}{2! 2! 2!} &= 90
+    \end{align*}
+\end{enumerate}
+
+
 \end{document}
