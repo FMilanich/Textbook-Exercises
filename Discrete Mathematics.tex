@@ -1305,5 +1305,37 @@ The following special cases should be familiar from previous problems and theore
     \end{align*}
 \end{enumerate}
 
+\subsection{Exercise}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item How many ways can you place $n$ rooks on a chessboard so that no two attack each other (Figure 7)? We assume that the rooks are identical, so e.g. interchanging two rooks does not count as a separate placement.
+    \item How many ways can you do this if you have 4 black and 4 white rooks?
+    \item How many ways can you do this if all the 8 rooks are different?
+\end{enumerate}
+
+\hrulefill\vspace{2mm}
+
+\begin{figure*}[h]
+    \includegraphics[width=\linewidth]{Discrete-Mathematics-images/fig7.jpg}
+    \captionsetup{labelformat=empty}
+    \caption{Figure 7: Placing 8 non-attacking rooks on a chessboard}
+    \label{fig:fig7}
+\end{figure*}
+
+\begin{enumerate}[label=\big(\alph*\big)]
+    \item Well, let's think a bit. The chess table is a 8x8 grid and rooks can go up and down to the edge of the table. So, every rook cancels out one column and one row for the next one.
+    Knowing this, we can see the problem as the permutation of 8 columns/rows.
+    \begin{align*}
+        8! = 40320
+    \end{align*}
+    \item This is a similar problem, just that we have to group 4 columns/rows to each color for the attacking condition.
+    \begin{align*}
+        8!\binom{8}{4} = 2822400
+    \end{align*}
+    \item And this is just an expansion of (b), where every position matters. As we don't have to really group, this is just a double permutation of the 8 columns/rows.
+    \begin{align*}
+        8!^2 = 1625702400
+    \end{align*}
+\end{enumerate}
 
 \end{document}
